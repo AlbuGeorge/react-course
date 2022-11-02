@@ -14,9 +14,7 @@ function App() {
           exact
           element={<Navigate to="/quotes"></Navigate>}></Route>
         <Route path="/quotes/*" element={<AllQuotes />}></Route>
-        <Route path="/quotes/:quoteId">
-          <QuoteDetail />
-        </Route>
+        <Route path="/quotes/:quoteId" element={<QuoteDetail />}></Route>
         <Route path="/new-quote" element={<NewQuote />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

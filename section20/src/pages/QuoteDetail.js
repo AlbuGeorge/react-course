@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, Route, Routes, useParams } from 'react-router-dom'
+import { Link, Outlet, Route, Routes, useParams } from 'react-router-dom'
 import Comments from '../components/comments/Comments.js'
 import useHttp from '../hooks/use-http.js'
 import { getSingleQuote } from '../lib/api.js'
@@ -50,6 +50,7 @@ const QuoteDetail = () => {
           </div>
         </Route>
         <Route path="comments" element={<Comments />}></Route>
+        <Outlet />
       </Routes>
     </>
   )

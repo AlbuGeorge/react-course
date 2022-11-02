@@ -9,7 +9,7 @@ const NewQuote = () => {
   const navigate = useNavigate()
   useEffect(() => {
     if (status === 'completed') {
-      navigate.push('/quotes')
+      navigate('/quotes')
     }
   }, [status, navigate])
 
