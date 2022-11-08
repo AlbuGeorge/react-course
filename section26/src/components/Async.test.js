@@ -2,10 +2,10 @@ import { render, screen } from '@testing-library/react'
 import Async from './Async'
 
 describe('Async Component', () => {
-  test('renders posts if request succeds', () => {
+  test('renders posts if request succeds', async () => {
     render(<Async />)
 
-    const listItemElements = screen.getAllByRole('listitem')
+    const listItemElements = await screen.findAllByRole('listitem')
     expect(listItemElements).not.toHaveLength(0)
   })
 })
